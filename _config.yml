@@ -1,8 +1,8 @@
 # This will be the first part of the title tag for your site <title> site.name + page.title </title>
 title: Supply
-url: "https://supply.templates.supply" # the base hostname & protocol for your site, e.g. http://example.com, also used in jekyll-seo-tag
+url: "https://robosuit.github.io" # the base hostname & protocol for your site, e.g. http://example.com, also used in jekyll-seo-tag
 baseurl:
-repo: https://github.com/YJPL/Supply/
+repo: https://github.com/robosuit/robosuit.github.io/
 google_analytics_key:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
@@ -15,10 +15,10 @@ author:
   twitter: TemplatesSupply # twitter username without the @ symbol
   phone: ""
 social:
-  name: Templates Supply # replace this
-  links:
-    - https://github.com/YJPL/supply
-    - https://www.linkedin.com/company/templates-supply/
+  # name: Templates Supply # replace this
+  # links:
+  #   - https://github.com/YJPL/supply
+  #   - https://www.linkedin.com/company/templates-supply/
 
 # Build settings
 markdown: kramdown
