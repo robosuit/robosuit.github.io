@@ -1,14 +1,15 @@
 ---
 import "../styles/global.css";
+const base = '/robosuit-astro/';
 const { pageTitle = 'Home' } = Astro.props;
 const siteTitle = 'TODO Business Name';
 const navItems = [
-  { title: 'Home', href: '/' },
-  { title: 'Shop', href: '/shop' },
-  { title: 'Custom Orders', href: '/custom-orders' },
-  { title: 'Gallery', href: '/gallery' },
-  { title: 'About', href: '/about' },
-  { title: 'Contact', href: '/contact' },
+  { title: 'Home', href: base },
+  { title: 'Shop', href: `${base}shop` },
+  { title: 'Custom Orders', href: `${base}custom-orders` },
+  { title: 'Gallery', href: `${base}gallery` },
+  { title: 'About', href: `${base}about` },
+  { title: 'Contact', href: `${base}contact` },
 ];
 ---
 <!doctype html>
@@ -25,7 +26,7 @@ const navItems = [
   <body>
     <div class="site-shell">
       <header class="site-header">
-        <a class="brand" href="/">
+        <a class="brand" href={base}>
           <span class="brand-mark">3D</span>
           <div>
             <strong>{siteTitle}</strong>
