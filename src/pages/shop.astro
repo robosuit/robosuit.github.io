@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout pageTitle="Shop">
+  <section class="page-hero page-hero-small">
+    <div>
+      <span class="eyebrow">Shop</span>
+      <h1>Featured 3D Prints</h1>
+      <p>Browse a curated selection of prototype parts, display pieces, and ready-to-ship maker goods.</p>
+    </div>
+  </section>
+
+  <section class="product-grid">
+    {['Example Print A', 'Example Print B', 'Example Print C', 'Example Print D', 'Example Print E', 'Example Print F'].map((title, index) => (
+      <article class="card product-card">
+        <div class="card-media" style={`background-image: url('https://via.placeholder.com/600x400?text=${encodeURIComponent(title)}');`} />
+        <div class="card-content">
+          <span class="badge">Material: TODO</span>
+          <h2>{title}</h2>
+          <p>Placeholder description for a clean 3D printed product. Add pricing, size, and print notes later.</p>
+          <div class="card-footer">
+            <span class="price">USD TODO</span>
+            <a class="button button-secondary" href="/contact">Request details</a>
+          </div>
+        </div>
+      </article>
+    ))}
+  </section>
+
+  <section class="details-section">
+    <h2>Ready to sell soon</h2>
+    <p>Products are listed as examples while the online shop backend is being prepared. Use the contact page to ask about availability, lead time, and custom versions.</p>
+  </section>
+</BaseLayout>

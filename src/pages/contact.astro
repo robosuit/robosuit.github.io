@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout pageTitle="Contact">
+  <section class="page-hero page-hero-small">
+    <div>
+      <span class="eyebrow">Contact</span>
+      <h1>Get in Touch</h1>
+      <p>Send us your project idea, request a quote, or ask about custom 3D printing services.</p>
+    </div>
+  </section>
+
+  <section class="split-grid">
+    <div>
+      <h2>Contact details</h2>
+      <p>Email: <a href="mailto:todo@example.com">todo@example.com</a></p>
+      <p>Phone: TODO</p>
+      <p>Socials: TODO Instagram · TODO TikTok · TODO LinkedIn</p>
+      <p>Use the message area to describe your project, preferred material, and timeline.</p>
+    </div>
+    <div class="info-card contact-card">
+      <h3>Quick contact form</h3>
+      <form>
+        <label>
+          Name
+          <input type="text" placeholder="Your name" />
+        </label>
+        <label>
+          Email
+          <input type="email" placeholder="todo@example.com" />
+        </label>
+        <label>
+          Project details
+          <textarea placeholder="Describe your custom order or ask a question"></textarea>
+        </label>
+        <button type="submit" class="button button-primary">Submit placeholder request</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="details-section">
+    <h2>Need a quote?</h2>
+    <p>For custom orders, include dimensions, material preference, and end use. We’ll follow up with pricing ideas and next steps.</p>
+  </section>
+</BaseLayout>

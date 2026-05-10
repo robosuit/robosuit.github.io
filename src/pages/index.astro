@@ -1,11 +1,45 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
+<BaseLayout pageTitle="Home">
+  <section class="page-hero">
+    <div>
+      <span class="eyebrow">Home</span>
+      <h1>Custom 3D Printing with a Maker Mindset</h1>
+      <p>Placeholder business name and hero text. Showcase your prints, invite custom order requests, and build momentum for future online sales.</p>
+      <div class="button-group">
+        <a class="button" href="/shop">View Shop</a>
+        <a class="button button-secondary" href="/custom-orders">Start a custom order</a>
+      </div>
+    </div>
+  </section>
 
-<Layout>
-	<Welcome />
-</Layout>
+  <section class="grid-2">
+    <div class="card">
+      <h2>Why choose us?</h2>
+      <p>Clean, modern 3D printing for prototypes, display pieces, and custom parts. Placeholder content can be updated with your business story and specialty materials.</p>
+    </div>
+    <div class="card">
+      <h2>Future-ready store</h2>
+      <p>This site is designed for a static storefront today and a full online shop later. No checkout yet — just product inspiration and leads.</p>
+    </div>
+  </section>
+
+  <section class="details-section">
+    <h2>Featured services</h2>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <h3>Shop-ready prints</h3>
+        <p>Placeholder featured products with example materials, prices, and print notes.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Custom projects</h3>
+        <p>Custom orders for prototypes, replacement parts, and creative maker builds.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Portfolio gallery</h3>
+        <p>Highlight your best work and inspire visitors with sample prints and use cases.</p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout pageTitle="Gallery">
+  <section class="page-hero page-hero-small">
+    <div>
+      <span class="eyebrow">Gallery</span>
+      <h1>Print Showcase</h1>
+      <p>Explore sample builds, finished prototypes, and polished maker pieces from recent projects.</p>
+    </div>
+  </section>
+
+  <section class="gallery-grid">
+    {Array.from({ length: 8 }, (_, index) => (
+      <article class="gallery-card">
+        <div class="gallery-image" style={`background-image: url('https://via.placeholder.com/520x400?text=Gallery+${index + 1}');`} />
+        <div class="gallery-copy">
+          <h3>Project {index + 1}</h3>
+          <p>Placeholder caption for a 3D printed project — material, finish, or purpose can be added later.</p>
+        </div>
+      </article>
+    ))}
+  </section>
+</BaseLayout>

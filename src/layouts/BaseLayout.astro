@@ -1,0 +1,58 @@
+---
+import "../styles/global.css";
+const { pageTitle = 'Home' } = Astro.props;
+const siteTitle = 'TODO Business Name';
+const navItems = [
+  { title: 'Home', href: '/' },
+  { title: 'Shop', href: '/shop' },
+  { title: 'Custom Orders', href: '/custom-orders' },
+  { title: 'Gallery', href: '/gallery' },
+  { title: 'About', href: '/about' },
+  { title: 'Contact', href: '/contact' },
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle} | {siteTitle}</title>
+    <meta
+      name="description"
+      content="Custom 3D printing services, prototype production, and maker-led design support."
+    />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="/">
+          <span class="brand-mark">3D</span>
+          <div>
+            <strong>{siteTitle}</strong>
+            <small>Custom Prints & Rapid Prototyping</small>
+          </div>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          {navItems.map((item) => (
+            <a class={`nav-link${pageTitle === item.title ? ' active' : ''}`} href={item.href}>
+              {item.title}
+            </a>
+          ))}
+        </nav>
+      </header>
+
+      <main class="site-main">
+        <slot />
+      </main>
+
+      <footer class="site-footer">
+        <p>
+          <strong>{siteTitle}</strong> — placeholder business details for your future 3D print shop.
+        </p>
+        <p>
+          Email: <a href="mailto:todo@example.com">todo@example.com</a> · Socials: TODO Instagram · TODO TikTok · TODO LinkedIn
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
