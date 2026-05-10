@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL || '/';
 ---
 <BaseLayout pageTitle="Custom Orders">
   <section class="page-hero page-hero-small">
@@ -34,7 +35,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div>
       <h2>Start your custom order</h2>
       <p>Use the contact page to send your project brief. Mention size, function, and any special finish requests.</p>
-      <a class="button" href="/contact">Contact us about custom work</a>
+      <a class="button" href={`${base}contact`}>Contact us about custom work</a>
     </div>
   </section>
 </BaseLayout>
