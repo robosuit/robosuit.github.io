@@ -20,7 +20,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <p>Placeholder description for a clean 3D printed product. Add pricing, size, and print notes later.</p>
           <div class="card-footer">
             <span class="price">USD TODO</span>
-            <a class="button button-secondary" href="/contact">Request details</a>
+            <a class="button button-secondary" href={`${import.meta.env.BASE_URL || '/'}contact`}>Request details</a>
           </div>
         </div>
       </article>

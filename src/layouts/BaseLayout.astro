@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-const base = '/robosuit-astro/';
+const base = import.meta.env.BASE_URL || '/';
 const { pageTitle = 'Home' } = Astro.props;
 const siteTitle = 'TODO Business Name';
 const navItems = [
